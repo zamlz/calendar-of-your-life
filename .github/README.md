@@ -13,7 +13,7 @@ pip install --user requirements.txt
 ## Usage
 
 ```bash
-./main.py ${PATH_TO_CALENDAR_FILE}
+python3 main.py ${PATH_TO_CALENDAR_FILE}
 ```
 
 ![example output](/.github/example.png)
