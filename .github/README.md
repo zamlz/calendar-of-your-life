@@ -10,6 +10,7 @@ your Life** infographic poster.
 ./main.py ${PATH_TO_CALENDAR_FILE}
 ```
 
+![example output](/.github/example.png)
 
 ## Sample Calendar File
 
