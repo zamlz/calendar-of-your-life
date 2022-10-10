@@ -4,6 +4,12 @@ A simple to help generate a calendar of your life. I made this to specifically
 help figure out what circles to highlight for the  **Kurzgesagt's Calendar of
 your Life** infographic poster.
 
+## Install
+
+```bash
+pip install --user requirements.txt
+```
+
 ## Usage
 
 ```bash
