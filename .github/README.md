@@ -20,21 +20,31 @@ python3 main.py ${PATH_TO_CALENDAR_FILE}
 
 ## Sample Calendar File
 
-Setup a `yaml` file like the one below which contains event ranges.
+Setup a `json` file like the one below which contains event ranges.
 
-```yaml
-birthday: 1995-11-08
-events:
-  - name: "2y"
-    color: green
-    start: 1995-11-08
-    end: 1997-11-08
-  - name: "2y"
-    color: red
-    start: 1997-11-08
-    end: 1999-10-09
-  - name: "test"
-    color: blue 
-    start: 1999-10-09
-    end: 2005-07-31
+```json
+{
+  "name": "my calendar",
+  "birthday": "1995-11-08",
+  "events": [
+    {
+      "name": "2y",
+      "color": "green",
+      "start": "1995-11-08",
+      "end": "1997-11-08"
+    },
+    {
+      "name": "2y",
+      "color": "red",
+      "start": "1997-11-08",
+      "end": "1999-10-09"
+    },
+    {
+      "name": "test",
+      "color": "blue",
+      "start": "1999-10-09",
+      "end": "2005-07-31"
+    }
+  ]
+}
 ```
