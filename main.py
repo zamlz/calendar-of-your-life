@@ -54,11 +54,13 @@ class DateRange(BaseModel):
     start: date
     end: date
 
+    @property
+    def duration(self) -> int:
+        return (self.end - self.start).days
 
-class LifeEvent(BaseModel):
+
+class LifeEvent(DateRange):
     name: str
-    start: date
-    end: date
     color: Color
 
 
@@ -75,7 +77,8 @@ class LifeCalendar(BaseModel):
 
     def __getitem__(self, week: DateRange) -> Optional[LifeEvent]:
         life_event = None
-        for event in self.events:
+        # smaller events have a higher priority on the calendar!
+        for event in reversed(sorted(self.events, key=lambda x: x.duration)):
             # fully bounded
             if event.start >= week.start and event.end <= week.end:
                 return event
